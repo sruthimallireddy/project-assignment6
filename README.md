@@ -13,11 +13,6 @@ Run:
 1. Start the server: `npm start` (listens on PORT 3000 by default or `process.env.PORT`).
 2. Open your browser at `http://localhost:3000/home` (or `/about`, `/contact`).
 
-If you see an error like `EADDRINUSE` (address already in use), it means port 3000 is occupied. Fix options:
-- Find the process: `lsof -i :3000 -P -n` or `sudo lsof -t -i:3000`
-- Stop it: `kill <PID>` (or `kill -9 <PID>` if necessary)
-- Or start on a different port: `PORT=3001 npm start`
-
 
 Files added:
 - `server.js` — entry point
@@ -27,5 +22,3 @@ Files added:
 
 Testing:
 - `curl -i http://localhost:3000/home` etc.
-
-Feel free to ask for Express.js version or more routes.
